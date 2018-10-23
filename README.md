@@ -29,4 +29,4 @@ This will enable the fan whenever the cloudshell-lcd.service stops. To prevent t
 
 # Example Screen
 
-![Example LCD Screen](/resources/xu4cs2-fanlcd.jpg?raw=true)
+![Example LCD Screen](/resources/xu4cs2-fanlcd.jpg#2?raw=true)
