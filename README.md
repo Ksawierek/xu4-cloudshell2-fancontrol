@@ -12,7 +12,7 @@ It is possible to set temperature thresholds for CPU and HDD where the fan will 
 # Installation
 
 - follow [these](https://wiki.odroid.com/accessory/add-on_boards/xu4_cloudshell2/xu4_cloudshell2#enable_lcd_and_fan) steps to install the original lcd-service from Odroid, e.g.:
-    ```
+    ```sh
     odroid@odroid:~$ sudo apt-get update
     odroid@odroid:~$ sudo apt-get install odroid-cloudshell cloudshell2-fan
     odroid@odroid:~$ sudo reboot
@@ -20,7 +20,7 @@ It is possible to set temperature thresholds for CPU and HDD where the fan will 
     ([here](http://bazaar.launchpad.net/~kyle1117/+junk/cloudshell-lcd/view/head:/bin/cloudshell-lcd) is the link to the current script)
 - overwrite the `/bin/cloudshell-lcd` and  `/bin/checkRAID.bash/` with the content in this repo
 - optionally, edit the file `cloudshell-lcd.service` in `/lib/systemd/system` and add two lines in [Service] section:
-```
+```sh
 ExecStart=/bin/cloudshell-lcd
 ExecStopPost=/usr/sbin/i2cset -y 1 0x60 0x05 0x00
 ```
@@ -29,4 +29,4 @@ This will enable the fan whenever the cloudshell-lcd.service stops. To prevent t
 
 # Example Screen
 
-[xu4cs2-fanlcd.jpg]
+![Example LCD Screen]((/resources/xu4cs2-fanlcd.jpg?raw=true))
