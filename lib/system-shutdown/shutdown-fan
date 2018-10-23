@@ -1,0 +1,21 @@
+#!/bin/bash
+# Shutdown Fan Script on System Shutown
+#
+# requires the following packages:
+# curl
+#
+#
+
+############## Configuration
+
+fan_on() {
+    i2cset -y 1 0x60 0x05 0x00
+}
+
+fan_off() {
+    i2cset -y 1 0x60 0x05 0x05
+}
+
+echo "Preparing shutdown.. "
+fan_off
+echo "Fan turned off..Done."
