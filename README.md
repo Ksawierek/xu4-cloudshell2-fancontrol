@@ -1,7 +1,7 @@
 # xu4-cloudshell2-fancontrol with RAID monitoring
 
 This is a fork from [xu4-cloudshell2-fancontrol](https://github.com/crazyquark/xu4-cloudshell2-fancontrol) that was modified/combined with a script to display RAID Info and HDD Temperatures (modified from [this](https://forum.odroid.com/viewtopic.php?f=147&t=29298#p209432)).
-It is possible to set temperature thresholds for CPU and HDD where the fan will be turned on.
+It is possible to set temperature thresholds for CPU and HDD where the fan will be turned on. Note that this is mainly a mere combination of different authors' work!
 
 # Notes
 
