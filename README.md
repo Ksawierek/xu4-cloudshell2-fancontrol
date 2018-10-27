@@ -19,6 +19,8 @@ It is possible to set temperature thresholds for CPU and HDD where the fan will 
     ```
     ([here](http://bazaar.launchpad.net/~kyle1117/+junk/cloudshell-lcd/view/head:/bin/cloudshell-lcd) is the link to the current script)
 - overwrite the `/bin/cloudshell-lcd` and  `/bin/checkRAID.bash/` with the content in this repo
+- add the following line to crontab (`crontab -e`):
+`0,15,30,45 * * * * /bin/checkRAID.bash > /bin/checkRAID.txt 2>&1`
 - optionally, edit the file `cloudshell-lcd.service` in `/lib/systemd/system` and add two lines in [Service] section:
 ```sh
 ExecStart=/bin/cloudshell-lcd
